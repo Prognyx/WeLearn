@@ -3,32 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        main {
-            padding: 2em;
-        }
-    </style>
+    <title>Videochat Plattform</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Willkommen auf meiner Webseite!</h1>
+        <h1>Willkommen auf der Videochat Plattform</h1>
     </header>
     <main>
-        <p>Dies ist eine einfache statische Webseite, die mit GitHub Pages gehostet wird.</p>
+        <div class="video-container">
+            <video id="localVideo" autoplay muted></video>
+            <video id="remoteVideo" autoplay></video>
+        </div>
+        <div class="controls">
+            <button id="startButton">Start</button>
+            <button id="callButton" disabled>Anrufen</button>
+            <button id="hangupButton" disabled>Auflegen</button>
+        </div>
     </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
