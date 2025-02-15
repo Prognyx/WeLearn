@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videochat Plattform</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>We-Learn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Willkommen auf der Videochat Plattform</h1>
+        <h1>We-Learn</h1>
+        <p>Gemeinsam online lernen und Hausaufgaben machen!</p>
     </header>
+
     <main>
-        <div class="video-container">
-            <video id="localVideo" autoplay muted></video>
-            <video id="remoteVideo" autoplay></video>
+        <div id="auth-container">
+            <h2>Registrieren</h2>
+            <input type="email" id="register-email" placeholder="E-Mail">
+            <input type="password" id="register-password" placeholder="Passwort">
+            <button id="register-btn">Registrieren</button>
+
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="E-Mail">
+            <input type="password" id="login-password" placeholder="Passwort">
+            <button id="login-btn">Einloggen</button>
+
+            <button id="logout-btn" class="hidden">Logout</button>
         </div>
-        <div class="controls">
-            <button id="startButton">Start</button>
-            <button id="callButton" disabled>Anrufen</button>
-            <button id="hangupButton" disabled>Auflegen</button>
+
+        <div id="user-info" class="hidden">
+            <h2>Willkommen!</h2>
+            <p id="user-email"></p>
         </div>
     </main>
-    <script src="scripts.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
+
